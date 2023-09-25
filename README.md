@@ -3,33 +3,33 @@ Part 1: Yelp Dataset Profiling and Understanding
 
 1. Profile the data by finding the total number of records for each of the tables below:
 	
-	i. 	Attribute table =			10000
+	i. 	Attribute table =		10000
 	ii. 	Business table =		10000
 	iii. 	Category table =		10000
 	iv. 	Checkin table =			10000
-	v. 	elite_years table =			10000
+	v. 	elite_years table =		10000
 	vi. 	friend table = 			10000
 	vii. 	hours table =			10000
 	viii. 	photo table = 			10000
 	ix. 	review table = 			10000
-	x. 	tip table = 				10000
+	x. 	tip table = 			10000
 	xi. 	user table =			10000
 	
 
 
 2. Find the total number of distinct records for each of the keys listed below:
 
-	i. 		Business =			10000 	(id)
+	i.	Business =			10000 	(id)
 	ii. 	Hours =				1562 	(business_id)
 	iii. 	Category =			2643    (business_id)
 	iv. 	Attribute =			1115	(business_id)
-	v. 		Review =			10000	(id),		8090 (business_id), 	9581 (user_id)
+	v.	Review =			10000	(id),		8090 (business_id), 	9581 (user_id)
 	vi. 	Checkin = 			493 	(business_id)
 	vii. 	Photo =				10000	(id),		6493 (business_id)
-	viii. 	Tip = 				537		(user_id),  3979 (business_id)
+	viii. 	Tip = 				537	(user_id),  	3979 (business_id)
 	ix. 	User = 				10000	(id)
-	x. 		Friend = 			11		(user_id)
-	xi. 	Elite_years =	    2780	(user_id)
+	x.	Friend = 			11	(user_id)
+	xi. 	Elite_years =	    		2780	(user_id)
 	
 
 
@@ -42,27 +42,26 @@ Part 1: Yelp Dataset Profiling and Understanding
 		SELECT *
 		FROM  user
 		WHERE 	id is null OR
-				name is null OR
-				review_count is null OR
-				yelping_since is null OR
-				useful is null OR
-				funny is null OR
-				cool is null OR
-				fans is null OR
-				average_stars is null OR
-				compliment_hot is null OR
-				compliment_more is null OR
-				compliment_profile is null OR
-				compliment_cute is null OR
-				compliment_list is null OR
-				compliment_note is null OR
-				compliment_plain is null OR
-				compliment_cool is null OR
-				compliment_funny is null OR
-				compliment_writer is null OR
-				compliment_photos is null;
+			name is null OR
+			review_count is null OR
+			yelping_since is null OR
+			useful is null OR
+			funny is null OR
+			cool is null OR
+			fans is null OR
+			average_stars is null OR
+			compliment_hot is null OR
+			compliment_more is null OR
+			compliment_profile is null OR
+			compliment_cute is null OR
+			compliment_list is null OR
+			compliment_note is null OR
+			compliment_plain is null OR
+			compliment_cool is null OR
+			compliment_funny is null OR
+			compliment_writer is null OR
+			compliment_photos is null;
 	
-
 	
 4. Find the minimum, maximum, and average value for the following fields:
 
@@ -220,8 +219,8 @@ Part 1: Yelp Dataset Profiling and Understanding
 			| Lissa     |          834 |  120 |
 			+-----------+--------------+------+
 			
-		Interpretation:
-		The above table shows the number of fans sorted in the descending order and it can be seen that depite having the second to the last number of reviews, 'Amy' has themost fans. There is also no particular pattern observed in the review_count column so it can be concluded that there is no correlation between the two columns. Further assumptions based on the correlation based on content and other criteria between the number of reviews and fans, however, requires additional investigation.
+	Interpretation:
+	The above table shows the number of fans sorted in the descending order and it can be seen that depite having the second to the last number of reviews, 'Amy' has themost fans. There is also no particular pattern observed in the review_count column so it can be concluded that there is no correlation between the two columns. Further assumptions based on the correlation based on content and other criteria between the number of reviews and fans, however, requires additional investigation.
 	
 	
 9. Are there more reviews with the word "love" or with the word "hate" in them?
@@ -352,7 +351,7 @@ iii. Are you able to infer anything from the location data provided between thes
 	+-------+--------------+-----------------------------+-------------+
 	
 	
-	Based on the results above, it can be inferred that most shopping centers in the first group (2 to 3 stars) are located in Tropicana Avenue and therefore are in the same vicinity as opposed  to the locations of the second group that have no visible correlation.
+	Based on the results above, it can be inferred that most shopping centers in the first group (2 to 3 stars) are located in Tropicana Avenue and therefore are in the same vicinity as opposed  to the locations of the second group (4 to 5 stars) that have no visible correlation.
 	
 2. Group business based on the ones that are open and the ones that are closed. What differences can you find between the ones that are still open and the ones that are closed? List at least two differences and the SQL code you used to arrive at your answer.
 		
